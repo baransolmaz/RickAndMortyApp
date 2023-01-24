@@ -1,1 +1,1 @@
-# Softtech-Project
+# Rick And Morty App
