@@ -19,9 +19,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.baransolmaz.rickandmortyapp.R
 import com.baransolmaz.rickandmortyapp.data.Character
+import com.baransolmaz.rickandmortyapp.data.SingleCharacterResponse
 
 @Composable
-fun CharacterCard(painter: Painter,character:Character) {
+fun CharacterCard(painter: Painter,character:SingleCharacterResponse) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -49,18 +50,16 @@ fun CharacterCard(painter: Painter,character:Character) {
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
                 Text(text = character.name, fontSize = 22.sp)
-                Text(text = character.type, fontSize = 18.sp, color = Color.DarkGray)
+                Text(text = character.species, fontSize = 18.sp, color = Color.DarkGray)
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(5.dp)
 
                 ) {
-                    DeadCircle(character.isAlive)
-                    Text(text = if (character.isAlive){
-                                    "Alive"
-                                }else
-                                    "Dead"
-                        , fontSize = 18.sp,
+                    DeadCircle(character.status)
+                    Text(
+                        text = character.status,
+                        fontSize = 18.sp,
                         color = Color.DarkGray
                     )
                 }
@@ -74,13 +73,13 @@ fun CharacterCard(painter: Painter,character:Character) {
 private fun BodyPreview() {
     CharacterCard(
         painter = painterResource(id = R.drawable.rick_and_morty),
-        Character("Rick Sanchez","Human",true)
+        SingleCharacterResponse(name = "Rick Sanchez", status = "Alive", species = "Human")
     )
 }
 @Composable
-fun DeadCircle(isAlive:Boolean=false){
+fun DeadCircle(isAlive:String="Alive"){
     Canvas(modifier = Modifier.size(9.dp), onDraw = {
-        drawCircle(color = if (isAlive)
+        drawCircle(color = if (isAlive=="Alive")
                                 Color.Green
                             else
                                 Color.Red
