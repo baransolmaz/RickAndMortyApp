@@ -1,4 +1,4 @@
-package com.baransolmaz.rickandmortyapp.data
+package com.baransolmaz.rickandmortyapp.data.navigation
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
