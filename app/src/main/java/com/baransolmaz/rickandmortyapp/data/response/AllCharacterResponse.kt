@@ -1,8 +1,8 @@
-package com.baransolmaz.rickandmortyapp.data
+package com.baransolmaz.rickandmortyapp.data.response
 
 
 data class AllCharacterResponse(
-    val info: Info =Info(),
+    val info: Info = Info(),
     val results :List<SingleCharacterResponse> = listOf<SingleCharacterResponse>()
 ){
     data class Info(

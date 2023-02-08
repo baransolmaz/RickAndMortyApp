@@ -1,13 +1,13 @@
-package com.baransolmaz.rickandmortyapp.data
+package com.baransolmaz.rickandmortyapp.data.response
 
 data class SingleCharacterResponse(
     val created:String ="",
     val episode:List<String> = listOf(),
     val gender:String? ="Male",
     val id:Int =0,
-    val location:Location =Location(),
+    val location: Location = Location(),
     val name:String? ="Cult Leader Morty",
-    val origin:Origin =Origin(),
+    val origin: Origin = Origin(),
     val species:String? ="Human",
     val status:String? ="Alive",
     val type:String? ="",
