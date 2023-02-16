@@ -6,7 +6,7 @@ import com.baransolmaz.rickandmortyapp.data.response.SimpleResponse
 import com.baransolmaz.rickandmortyapp.data.response.SingleCharacterResponse
 import com.baransolmaz.rickandmortyapp.repository.MainRepo
 
-class DetailViewModel(//pokemon detail Viewmodel
+class DetailViewModel(
     private val repo: MainRepo
 ):ViewModel() {
 

@@ -6,7 +6,7 @@ import com.baransolmaz.rickandmortyapp.data.response.SimpleResponse
 import com.baransolmaz.rickandmortyapp.data.response.SingleCharacterResponse
 
 
-class MainRepoImpl (//PokemonRepo
+class MainRepoImpl (
     private val api:RickAndMortyService
 ): MainRepo {
 

@@ -9,7 +9,7 @@ import com.baransolmaz.rickandmortyapp.repository.MainRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MainViewModel(//pokemon list View model
+class MainViewModel(
     private val repo: MainRepo
 ):ViewModel() {
     private var currentPage=1
