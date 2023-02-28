@@ -23,4 +23,5 @@ data class SingleCharacterResponse(
         val name:String? ="Unknown",
         val url:String =""
     )
+
 }
